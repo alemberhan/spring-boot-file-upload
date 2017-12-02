@@ -1,6 +1,0 @@
-com\alem\service\FileService.class
-com\alem\controller\FileUploadController.class
-com\alem\service\FileServiceImp.class
-com\alem\SpringBootWebApplication.class
-com\alem\model\File.class
-com\alem\repository\FileRepository.class
