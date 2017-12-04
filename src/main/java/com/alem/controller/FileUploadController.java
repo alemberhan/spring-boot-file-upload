@@ -27,11 +27,10 @@ public class FileUploadController {
 
 		if (file.isEmpty()) {
 			model.put("message", "Please select a file to upload");
+		} else if (fileService.uploadFile(file)) {
+			model.put("message", "You Have sucessfully uploaded " + FilenameUtils.getName(file.getOriginalFilename()));
 		} else {
-			if (fileService.uploadFile(file)) {
-				model.put("message",
-						"You Have sucessfully uploaded " + FilenameUtils.getName(file.getOriginalFilename()));
-			}
+			model.put("message", "SERVER ERROR!!! Please See the log.");
 		}
 		return "index";
 	}
